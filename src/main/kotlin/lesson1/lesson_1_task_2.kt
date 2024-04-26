@@ -1,6 +1,6 @@
 package org.example.lesson1
 
-fun lesson_1_task_2() {
+fun main() {
     val orderNumber = 75
     val greetingMessage = "Спасибо, что выбираете наш интернет-магазин"
 
