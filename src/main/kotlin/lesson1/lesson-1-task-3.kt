@@ -1,11 +1,11 @@
 package org.example.lesson1
 
-fun lesson_1_task_3() {
-    val year = 1961
-    var hour = 9
-    var minute = 7
-    println("$year\n$hour\n$minute")
-    hour = 10
-    minute = 55
-    print("$hour:$minute")
+fun main() {
+    val year = "1961"
+    var hour = "9"
+    var minute = "7"
+    println("${year.padStart(4, '0')}\n${hour.padStart(2, '0')}\n${minute.padStart(2,'0')}")
+    hour = "10"
+    minute = "55"
+    print("${hour.padStart(2,'0')}:${minute.padStart(2,'0')}")
 }
