@@ -1,11 +1,17 @@
 package lesson4
 
 fun main() {
-    val set1 = "руки/пресс"
-    val set2 = "ноги/спина"
-
-    val startSet = set1
+    val exerciseArm = "Упражнения для рук"
+    val exerciseLegs = "Упражнения для ног"
+    val exerciseBack = "Упражнения для спины"
+    val exercisePress = "Упражнения для пресса"
+    val variantsAmount = 2
     val currentDay = 5
 
-    var currentSet =  currentDay % 2
+    println("""
+        $exerciseArm:        ${currentDay % variantsAmount == 1}
+        $exerciseLegs:        ${currentDay % variantsAmount == 0}
+        $exerciseBack:      ${currentDay % variantsAmount == 0}
+        $exercisePress:     ${currentDay % variantsAmount == 1}
+    """.trimIndent())
 }
