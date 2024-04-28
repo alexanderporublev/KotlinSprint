@@ -1,14 +1,15 @@
 package lesson2
 
 fun main() {
-    var crystals = 7
-    var ferrums = 11
+    val baseCrystals = 7
+    val baseFerrums = 11
 
-    val buff = 0.2
+    val buff = 20
+    val fullPercents = 100
 
-    crystals += (crystals * buff).toInt()
-    ferrums += (ferrums * buff).toInt()
+    val buffedCystals = (baseCrystals * buff / fullPercents).toInt()
+    val buffedFerrums = (baseFerrums * buff / fullPercents).toInt()
 
-    println("Current crystals amount: $crystals")
-    println("Current ferrums amount: $ferrums")
+    println("Buffed crystals amount: $buffedCystals")
+    println("Buffed ferrums amount: $buffedFerrums")
 }
