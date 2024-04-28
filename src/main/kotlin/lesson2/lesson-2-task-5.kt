@@ -1,8 +1,10 @@
 package lesson2
 
 fun main() {
+    val totalPercent = 100
+
     var capital : Double = 70000.0
-    val percent = 0.167
+    val percent = 16.7 / totalPercent
 
     var term = 20
     while (term-- > 0) {
