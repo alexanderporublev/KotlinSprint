@@ -6,10 +6,9 @@ fun main() {
     var capital : Double = 70000.0
     val percent = 16.7 / totalPercent
 
-    var term = 20
-    while (term-- > 0) {
-        capital += capital * percent
-    }
+    val term = 20
+
+    capital += capital * Math.pow(1 + percent, term.toDouble())
 
     println("Total capital after 20 years: %.3f".format(capital))
 }
