@@ -1,5 +1,7 @@
 package lesson2
 
+import kotlin.math.pow
+
 fun main() {
     val totalPercent = 100
 
@@ -8,7 +10,7 @@ fun main() {
 
     val term = 20
 
-    capital += capital * Math.pow(1 + percent, term.toDouble())
+    capital *=(1 + percent).pow(term)
 
     println("Total capital after 20 years: %.3f".format(capital))
 }
