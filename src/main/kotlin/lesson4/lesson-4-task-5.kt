@@ -1,18 +1,18 @@
 package lesson4
 
+const val MINIMAL_STAFF_AMOUNT = 55
+const val NORMAL_STAFF_AMOUNT = 70
+const val MINIMAL_RESOURCE_AMOUNT = 50
+
+const val APPROVE_ANSWER = "д"
+const val DECLINE_ANSWER = "н"
+
 fun main() {
-    val minimalStaffAmount = 55
-    val normalStaffAmount = 70
-    val minimalResourceAmount = 50
-
-    val approveAnswer = "д"
-    val declineAnswer = "н"
-
     val approveMessage = "При данных условиях корабль может выйти в море."
     val declineMessage = "При данных условиях корабль не может выйти в море."
 
-    print("Имеет ли корабль повреждения? [$approveAnswer/$declineAnswer]: ")
-    val hasMalfunction = readln() == approveAnswer
+    print("Имеет ли корабль повреждения? [$APPROVE_ANSWER/$DECLINE_ANSWER]: ")
+    val hasMalfunction = readln() == APPROVE_ANSWER
     println()
 
     print("Введите количество членов экипажа: ")
@@ -23,14 +23,14 @@ fun main() {
     val resourceAmount = readln().toInt()
     println()
 
-    print("Благоприятна ли подода? [$approveAnswer/$declineAnswer]: ")
-    val weatherIsComfort = readln() == approveAnswer
+    print("Благоприятна ли подода? [$APPROVE_ANSWER/$DECLINE_ANSWER]: ")
+    val weatherIsComfort = readln() == APPROVE_ANSWER
     println()
 
-    val approved =      (resourceAmount >= minimalResourceAmount)
+    val approved =      (resourceAmount >= MINIMAL_RESOURCE_AMOUNT)
                      && (
-                            (!hasMalfunction && staffAmount >= minimalStaffAmount && staffAmount <= normalStaffAmount)
-                         || (weatherIsComfort && staffAmount == normalStaffAmount)
+                            (!hasMalfunction && staffAmount >= MINIMAL_STAFF_AMOUNT && staffAmount <= NORMAL_STAFF_AMOUNT)
+                         || (weatherIsComfort && staffAmount == NORMAL_STAFF_AMOUNT)
                         )
 
     println(if (approved) approveMessage else declineMessage )
