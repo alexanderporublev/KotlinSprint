@@ -8,10 +8,11 @@ fun main() {
     val variantsAmount = 2
     val currentDay = 5
 
+    val isOddDay = currentDay % variantsAmount == 0
     println("""
-        $exerciseArm:        ${currentDay % variantsAmount == 1}
-        $exerciseLegs:        ${currentDay % variantsAmount == 0}
-        $exerciseBack:      ${currentDay % variantsAmount == 0}
-        $exercisePress:     ${currentDay % variantsAmount == 1}
+        $exerciseArm:        ${!isOddDay}
+        $exerciseLegs:        $isOddDay
+        $exerciseBack:      $isOddDay
+        $exercisePress:     ${!isOddDay}
     """.trimIndent())
 }
