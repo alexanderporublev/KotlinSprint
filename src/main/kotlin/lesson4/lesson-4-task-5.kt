@@ -27,7 +27,7 @@ fun main() {
     val weatherIsComfort = readln() == APPROVE_ANSWER
     println()
     val firstVariant = resourceAmount > MINIMAL_RESOURCE_AMOUNT && !hasMalfunction && staffAmount >= MINIMAL_STAFF_AMOUNT && staffAmount <= NORMAL_STAFF_AMOUNT
-    val secondVariant = resourceAmount >= MINIMAL_RESOURCE_AMOUNT && hasMalfunction && weatherIsComfort && staffAmount == NORMAL_STAFF_AMOUNT
+    val secondVariant = resourceAmount >= MINIMAL_RESOURCE_AMOUNT && weatherIsComfort && staffAmount == NORMAL_STAFF_AMOUNT
     val approved =  firstVariant || secondVariant
 
     println(if (approved) approveMessage else declineMessage )
