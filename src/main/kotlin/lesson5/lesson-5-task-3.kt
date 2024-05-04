@@ -5,13 +5,13 @@ fun main() {
     val secondNumber = 14
 
     println("Введите первое число:")
-    val firstGuessedNumber = readlnOrNull()?.toInt()
+    val firstGuessedNumber = readln().toInt()
 
     println("Введите второе число:")
-    val secondGuessedNumber = readlnOrNull()?.toInt()
+    val secondGuessedNumber = readln().toInt()
 
-    val firstGuessed = firstGuessedNumber != null && firstGuessedNumber == firstNumber || secondGuessedNumber != null && secondGuessedNumber == firstNumber
-    val secondGuessed = firstGuessedNumber != null && firstGuessedNumber == secondNumber || secondGuessedNumber != null && secondGuessedNumber == secondNumber
+    val firstGuessed = firstGuessedNumber == firstNumber || secondGuessedNumber == firstNumber
+    val secondGuessed = firstGuessedNumber == secondNumber || secondGuessedNumber == secondNumber
 
     if (firstGuessed && secondGuessed)
         println("Поздравляем! Вы выиграли главный приз!")
