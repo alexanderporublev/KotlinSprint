@@ -6,7 +6,7 @@ fun main() {
     val requiredNumbers = emptySet<Int>().toMutableSet()
 
     while (requiredNumbers.count() < numbersAmount)
-        requiredNumbers += (Math.random() * maxNumber).toInt()
+        requiredNumbers += (1..maxNumber).random()
 
     //!!Раскомментировать для отладки
     //requiredNumbers.forEach { it -> print("$it ")  }
