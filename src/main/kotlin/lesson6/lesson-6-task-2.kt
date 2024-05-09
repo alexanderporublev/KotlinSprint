@@ -1,6 +1,6 @@
 package lesson6
 
-const val MILLIS_IN_SECOND = 1000
+//const val MILLIS_IN_SECOND = 1000
 
 fun main() {
 
