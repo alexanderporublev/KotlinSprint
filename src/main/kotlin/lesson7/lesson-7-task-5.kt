@@ -19,8 +19,7 @@ fun main() {
         password += symbol
     }
 
-    println(password)
-    var shuffledPassword = ""
+   var shuffledPassword = ""
     password.toMutableList().shuffled().forEach{shuffledPassword += it}
     println(shuffledPassword)
 }
