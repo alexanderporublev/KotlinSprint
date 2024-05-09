@@ -4,8 +4,11 @@ fun main() {
     val ingredients = arrayOf("помидор", "мясо", "соус", "салат", "хлеб")
     println("Введите название ингридиента:")
     val inoutIngredient = readln()
-    if (inoutIngredient.lowercase() in ingredients)
-        println("Ингридиент $inoutIngredient в рецепте есть")
-    else
-        println("Такого ингредиента в рецепте нет")
+    for(ingredient in ingredients) {
+        if (inoutIngredient.lowercase() == ingredient) {
+            println("Ингридиент $inoutIngredient в рецепте есть")
+            return
+        }
+    }
+    println("Такого ингредиента в рецепте нет")
 }
