@@ -3,6 +3,7 @@ package lesson10
 fun generatePassword(length: Int) : String {
     val specialSymbols = "!\"#\$%&'()*+,-./ "
     var password = "" + (0..9).random() + specialSymbols[specialSymbols.indices.random()]
+
     while (password.length < length) {
         password += when ((0..1).random()) {
             0 -> (0..9).random()
@@ -10,6 +11,7 @@ fun generatePassword(length: Int) : String {
             else -> 'u'
         }
     }
+
     return password.toList().shuffled().joinToString("")
 }
 
