@@ -1,6 +1,6 @@
 package lesson9
 
-const val approveAnswer = "да"
+const val APPROVE_ANSWER = "да"
 
 fun main() {
     val ingredients = mutableListOf("помидор", "мясо", "соус")
@@ -10,7 +10,7 @@ fun main() {
     println()
 
     println("Желаете добавить еще?")
-    if (readln() != approveAnswer)
+    if (readln() != APPROVE_ANSWER)
         return
 
     println("Какой ингредиент вы хотите добавить?")
