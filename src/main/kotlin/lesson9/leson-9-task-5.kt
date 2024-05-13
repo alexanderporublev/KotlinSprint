@@ -2,16 +2,17 @@ package lesson9
 
 const val INGREDIENTS_COUNT = 5
 fun main() {
-    val ingredientsList = emptyList<String>().toMutableList()
+    val ingredientsSet = emptySet<String>().toMutableSet()
 
     for(i in 1..INGREDIENTS_COUNT) {
         println("Введите ингридиент $i:")
-        ingredientsList += readln()
+        ingredientsSet += readln()
     }
 
-    println( ingredientsList
+    println( ingredientsSet
         .sorted()
         .joinToString(", ")
-        .mapIndexed { index, c -> if (index == 0) c.uppercase() else c }
-        .joinToString("") )
+        .replaceFirstChar { it.uppercase() }
+    )
+
 }
