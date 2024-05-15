@@ -1,10 +1,10 @@
 package lesson10
 
-const val APPROVE_ANSWER = "Да"
+const val APPROVE_ANSWER = "да"
 
 fun getRollResult() = (1..6).random()
 
-fun playRound() : Boolean {
+fun playRound(): Boolean {
     val humanResult = getRollResult()
     val computerResult = getRollResult()
 
@@ -14,8 +14,7 @@ fun playRound() : Boolean {
     if (humanResult > computerResult) {
         println("Вы победили!")
         return true
-    }
-    else {
+    } else {
         println("Победил компьютер")
         return false
     }
@@ -25,10 +24,10 @@ fun playRound() : Boolean {
 fun main() {
     var winCount = 0
 
-    do{
+    do {
         if (playRound()) winCount++
         println("Хотите бросить кости еще раз? Введите Да или Нет")
-    } while (readln() == APPROVE_ANSWER)
+    } while (readln().lowercase() == APPROVE_ANSWER)
 
     println("Выиграно партий: $winCount")
 }
