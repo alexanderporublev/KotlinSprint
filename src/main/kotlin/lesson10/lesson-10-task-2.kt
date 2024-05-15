@@ -2,7 +2,7 @@ package lesson10
 
 const val MIN_LENGTH = 4
 
-fun isLengthValid(str : String) = str.length >= MIN_LENGTH
+fun isLengthValid(str: String) = str.length >= MIN_LENGTH
 
 fun main() {
     println("Создайте логин:")
