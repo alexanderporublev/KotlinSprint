@@ -13,12 +13,15 @@ class Ingredient(
     }
 }
 
-class Receipt (
-    val name : String,
-    val ingredients : List<Ingredient>,
+class Receipt(
+    val name: String,
+    val ingredients: List<Ingredient>,
 )
 
-class Category (
-    val name : String,
-    val receipts: List<Receipt>,
-)
+class Category(
+    val name: String,
+    val description: String,
+    val receipts: MutableList<Receipt>,
+    ) {
+    fun addReceipt(receipt: Receipt) = receipts.add(receipt)
+}
