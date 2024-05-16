@@ -2,7 +2,7 @@ package lesson13
 
 class Note2(
     val name: String,
-    val phoneNumber: String,
+    val phoneNumber: Long,
     val company: String? = null,
 ) {
     fun print() = println(
@@ -17,7 +17,7 @@ class Note2(
 fun main() {
     val note = Note2(
         name = "Александр",
-        phoneNumber = "+7-967-541-92-12",
+        phoneNumber = 79675419212,
     )
     note.print()
 }
