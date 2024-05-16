@@ -2,14 +2,14 @@ package lesson13
 
 class Note(
     val name: String,
-    val phoneNumber: String,
+    val phoneNumber: Long,
     val company: String?,
 )
 
 fun main(){
     val note = Note(
         name = "Aleksandr",
-        phoneNumber = "+7-967-541-92-12",
+        phoneNumber = 79675419212,
         company = null,
     )
 
