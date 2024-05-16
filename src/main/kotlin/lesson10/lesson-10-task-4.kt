@@ -2,11 +2,11 @@ package lesson10
 
 const val APPROVE_ANSWER = "да"
 
-fun getRollResult() = (1..6).random()
+fun getRollResult1() = (1..6).random()
 
 fun playRound(): Boolean {
-    val humanResult = getRollResult()
-    val computerResult = getRollResult()
+    val humanResult = getRollResult1()
+    val computerResult = getRollResult1()
 
     println("Результат игрока: $humanResult")
     println("Результат компьютера: $computerResult")
