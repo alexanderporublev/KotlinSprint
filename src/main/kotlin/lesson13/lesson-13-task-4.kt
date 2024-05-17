@@ -24,7 +24,11 @@ fun main() {
         val name = readln()
 
         println("Введите номер телефона:")
-        val phoneNumber = readln().toLongOrNull() ?: continue
+        val phoneNumber = readln().toLongOrNull()
+        if (phoneNumber == null) {
+            println("Неверный формат номера")
+            continue
+        }
 
         println("Введите компанию:")
         val company = readln().ifEmpty { null }
