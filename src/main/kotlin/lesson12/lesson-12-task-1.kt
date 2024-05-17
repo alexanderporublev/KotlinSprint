@@ -1,6 +1,6 @@
 package lesson12
 
-const val degreeSymbol = '\u00B0'
+const val degreeSymbol1 = '\u00B0'
 
 class WhetherData() {
     var dayTemperature = 0f
@@ -9,8 +9,8 @@ class WhetherData() {
 
     fun print() = println(
         """
-        Дневная температура: $dayTemperature${degreeSymbol}C
-        Ночная температура: $nightTemperature${degreeSymbol}C
+        Дневная температура: $dayTemperature${degreeSymbol1}C
+        Ночная температура: $nightTemperature${degreeSymbol1}C
         Наличие осдаков: ${if (rain) "Были" else "Нет"}
     """.trimIndent()
     )
