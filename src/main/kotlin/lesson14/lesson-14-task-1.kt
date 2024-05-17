@@ -18,7 +18,7 @@ class CargoSheep(
     speed: Double = CARGO_SPEED,
     loadCapacity: Double = CARGO_LOAD_CAPACITY,
     passengersAmount: Int = CARGO_PASSENGERS_AMOUNT,
-    ) : LinearSheep(speed, loadCapacity,passengersAmount)
+    ) : LinearSheep(speed, loadCapacity, passengersAmount)
 
 const val ICEBEAKER_SPEED = 3.toDouble()
 const val ICEBEAKER_LOAD_CAPACITY = 7.toDouble()
@@ -28,7 +28,7 @@ class Icebreaker(
     speed: Double = ICEBEAKER_SPEED,
     loadCapacity: Double = ICEBEAKER_LOAD_CAPACITY,
     passengersAmount: Int = ICEBEAKER_PASSENGERS_AMOUNT,
-) : LinearSheep(speed, loadCapacity,passengersAmount) {
+) : LinearSheep(speed, loadCapacity, passengersAmount) {
     val canBreakIce = true
 }
 
