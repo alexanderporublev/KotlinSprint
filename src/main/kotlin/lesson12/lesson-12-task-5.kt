@@ -6,16 +6,16 @@ const val DAYS_IN_MONTH = 30
 const val MIN_DAILY_TEMPERATURE = -15 + ZERO_ABSOLUTE
 const val MAX_DAILY_TEMPERATURE = 30 + ZERO_ABSOLUTE
 
-fun kelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
+fun convertKelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
 
 class WhetherData4(
     dayTemperature: Int,
     nightTemperature: Int,
     rain: Boolean,
 ) {
-    var dayTemperature = kelvinToCelsius(dayTemperature)
-    var nightTemperature = kelvinToCelsius(nightTemperature)
-    var rain = rain
+    val dayTemperature = convertKelvinToCelsius(dayTemperature)
+    val nightTemperature = convertKelvinToCelsius(nightTemperature)
+    val rain = rain
 
     fun print() = println(
         """
