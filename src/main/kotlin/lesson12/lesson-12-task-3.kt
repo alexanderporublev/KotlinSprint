@@ -9,9 +9,9 @@ class WhetherData2(
     nightTemperature: Int,
     rain: Boolean,
 ) {
-    var dayTemperature = kelvinToCelsius(dayTemperature)
-    var nightTemperature = kelvinToCelsius(nightTemperature)
-    var rain = rain
+    val dayTemperature = kelvinToCelsius(dayTemperature)
+    val nightTemperature = kelvinToCelsius(nightTemperature)
+    val rain = rain
 
     fun print() = println(
         """
