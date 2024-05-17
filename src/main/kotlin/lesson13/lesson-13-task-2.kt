@@ -5,12 +5,9 @@ class Note2(
     val phoneNumber: Long,
     val company: String? = null,
 ) {
-    fun print() = println(
-        """
-        Имя: $name
-        Номер: $phoneNumber}
-        Компания: ${company ?: "не указано"}
-    """.trimIndent()
+    fun print() = println("Имя: $name\n" +
+        "Номер: $phoneNumber\n" +
+        "Компания: ${company ?: "не указано"}"
     )
 }
 
