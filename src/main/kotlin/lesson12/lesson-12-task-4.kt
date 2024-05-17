@@ -2,7 +2,7 @@ const val degreeSymbol = '\u00B0'
 
 const val ZERO_ABSOLUTE = 273
 
-fun kelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
+fun convertKelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
 
 class WhetherData3(
     dayTemperature: Int,
@@ -13,9 +13,9 @@ class WhetherData3(
         print()
     }
 
-    var dayTemperature = kelvinToCelsius(dayTemperature)
-    var nightTemperature = kelvinToCelsius(nightTemperature)
-    var rain = rain
+    val dayTemperature = convertKelvinToCelsius(dayTemperature)
+    val nightTemperature = convertKelvinToCelsius(nightTemperature)
+    val rain = rain
 
     fun print() = println(
         """
