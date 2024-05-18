@@ -1,4 +1,4 @@
-const val degreeSymbol = '\u00B0'
+const val DEGREE_SYMBOL = '\u00B0'
 
 const val ZERO_ABSOLUTE = 273
 
@@ -19,8 +19,8 @@ class WhetherData3(
 
     fun print() = println(
         """
-        Дневная температура: ${dayTemperature}${degreeSymbol}C
-        Ночная температура: ${nightTemperature}${degreeSymbol}C
+        Дневная температура: ${dayTemperature}${DEGREE_SYMBOL}C
+        Ночная температура: ${nightTemperature}${DEGREE_SYMBOL}C
         Наличие осдаков: ${if (rain) "Были" else "Нет"}
     """.trimIndent()
     )
