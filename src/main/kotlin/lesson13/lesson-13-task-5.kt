@@ -32,7 +32,7 @@ fun main() {
 
             notes.add(Note4(name, phoneNumber, company))
         } catch (e: NumberFormatException) {
-            println("Неверный ввод номера ${e.localizedMessage}")
+            println("Неверный ввод номера ${e.javaClass.simpleName}")
         }
     }
 
