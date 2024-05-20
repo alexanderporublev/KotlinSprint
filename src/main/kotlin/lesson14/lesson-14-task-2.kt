@@ -1,13 +1,10 @@
 package lesson14
 
-const val LINEAR_SPEED = 10.toDouble()
-const val LINEAR_LOAD_CAPACITY = 10.toDouble()
-const val LINEAR_PASSENGERS_AMOUNT = 100
 
 open class LinearSheep2(
-    val speed: Double = LINEAR_SPEED,
-    val loadCapacity: Double = LINEAR_LOAD_CAPACITY,
-    val passengersAmount: Int = LINEAR_PASSENGERS_AMOUNT,
+    val speed: Double = 10.toDouble(),
+    val loadCapacity: Double = 10.toDouble(),
+    val passengersAmount: Int = 100,
 ) {
     open val loadSheepMethod = "выдвигает горизонтальный трап со шкафута"
 
@@ -27,26 +24,20 @@ open class LinearSheep2(
     protected open fun printMethods() = println("Метод погрузки: $loadSheepMethod")
 }
 
-const val CARGO_SPEED = 5.toDouble()
-const val CARGO_LOAD_CAPACITY = 20.toDouble()
-const val CARGO_PASSENGERS_AMOUNT = 40
 
 class CargoSheep2(
-    speed: Double = CARGO_SPEED,
-    loadCapacity: Double = CARGO_LOAD_CAPACITY,
-    passengersAmount: Int = CARGO_PASSENGERS_AMOUNT,
+    speed: Double = 5.toDouble(),
+    loadCapacity: Double = 20.toDouble(),
+    passengersAmount: Int = 40,
 ) : LinearSheep2(speed, loadCapacity, passengersAmount) {
     override val loadSheepMethod = "активирует погрузочный кран"
 }
 
-const val ICEBREAKER_SPEED = 3.toDouble()
-const val ICEBREAKER_LOAD_CAPACITY = 7.toDouble()
-const val ICEBREAKER_PASSENGERS_AMOUNT = 20
 
 class Icebreaker2(
-    speed: Double = ICEBREAKER_SPEED,
-    loadCapacity: Double = ICEBREAKER_LOAD_CAPACITY,
-    passengersAmount: Int = ICEBREAKER_PASSENGERS_AMOUNT,
+    speed: Double = 3.toDouble(),
+    loadCapacity: Double = 7.toDouble(),
+    passengersAmount: Int = 20,
 ) : LinearSheep2(speed, loadCapacity, passengersAmount) {
     val canBreakIce = true
 
