@@ -1,8 +1,8 @@
-const val DEGREE_SYMBOL = '\u00B0'
+const val DEGREE_SYMBOL1 = '\u00B0'
 
-const val ZERO_ABSOLUTE = 273
+const val ZERO_ABSOLUTE2 = 273
 
-fun convertKelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
+fun convertKelvinToCelsius1(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE2
 
 class WhetherData3(
     dayTemperature: Int,
@@ -13,14 +13,14 @@ class WhetherData3(
         print()
     }
 
-    val dayTemperature = convertKelvinToCelsius(dayTemperature)
-    val nightTemperature = convertKelvinToCelsius(nightTemperature)
+    val dayTemperature = convertKelvinToCelsius1(dayTemperature)
+    val nightTemperature = convertKelvinToCelsius1(nightTemperature)
     val rain = rain
 
     fun print() = println(
         """
-        Дневная температура: ${dayTemperature}${DEGREE_SYMBOL}C
-        Ночная температура: ${nightTemperature}${DEGREE_SYMBOL}C
+        Дневная температура: ${dayTemperature}${DEGREE_SYMBOL1}C
+        Ночная температура: ${nightTemperature}${DEGREE_SYMBOL1}C
         Наличие осдаков: ${if (rain) "Были" else "Нет"}
     """.trimIndent()
     )

@@ -1,8 +1,8 @@
 const val degreeSymbol = '\u00B0'
 
-const val ZERO_ABSOLUTE = 273
+const val ZERO_ABSOLUTE1 = 273
 
-fun kelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE
+fun kelvinToCelsius(temperatureKelvin: Int) = temperatureKelvin - ZERO_ABSOLUTE1
 
 class WhetherData2(
     dayTemperature: Int,

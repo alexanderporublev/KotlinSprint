@@ -1,8 +1,8 @@
 package lesson13
 
-const val NOTES_AMOUNT = 3
+const val NOTES_AMOUNT1 = 3
 
-class Note4(
+class Note5(
     val name: String,
     val phoneNumber: Long,
     val company: String? = null,
@@ -17,9 +17,9 @@ class Note4(
 }
 
 fun main() {
-    val notes = listOf<Note4>().toMutableList()
+    val notes = listOf<Note5>().toMutableList()
 
-    while (notes.size < NOTES_AMOUNT) {
+    while (notes.size < NOTES_AMOUNT1) {
         println("\nВведите имя:")
         val name = readln()
 
@@ -33,7 +33,7 @@ fun main() {
         println("Введите компанию:")
         val company = readln().ifEmpty { null }
 
-        notes.add(Note4(name, phoneNumber, company))
+        notes.add(Note5(name, phoneNumber, company))
     }
 
     notes.forEach {
