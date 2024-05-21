@@ -2,8 +2,8 @@ package lesson14
 
 
 open class LinearSheep2(
-    val speed: Double = 10.toDouble(),
-    val loadCapacity: Double = 10.toDouble(),
+    val speed: Double = 10.0,
+    val loadCapacity: Double = 10.0,
     val passengersAmount: Int = 100,
 ) {
     open val loadSheepMethod = "выдвигает горизонтальный трап со шкафута"
@@ -26,8 +26,8 @@ open class LinearSheep2(
 
 
 class CargoSheep2(
-    speed: Double = 5.toDouble(),
-    loadCapacity: Double = 20.toDouble(),
+    speed: Double = 5.0,
+    loadCapacity: Double = 20.0,
     passengersAmount: Int = 40,
 ) : LinearSheep2(speed, loadCapacity, passengersAmount) {
     override val loadSheepMethod = "активирует погрузочный кран"
@@ -35,8 +35,8 @@ class CargoSheep2(
 
 
 class Icebreaker2(
-    speed: Double = 3.toDouble(),
-    loadCapacity: Double = 7.toDouble(),
+    speed: Double = 3.0,
+    loadCapacity: Double = 7.0,
     passengersAmount: Int = 20,
 ) : LinearSheep2(speed, loadCapacity, passengersAmount) {
     val canBreakIce = true
