@@ -8,30 +8,21 @@ interface Swimming {
     fun swim()
 }
 
-abstract class Animal() {
-    fun printAbilities() {
-        if (this is Flyable)
-            fly()
-
-        if (this is Swimming)
-            swim()
-    }
-}
 
 class Carp()
-    :Animal(), Swimming {
+    :Swimming {
     override fun swim() {
         println("Карась плавает")
     }
 }
 
-class Gull() :Animal(), Flyable {
+class Gull() : Flyable {
     override fun fly() {
         println("Чайка летает")
     }
 }
 
-class Duck() : Animal(), Flyable, Swimming {
+class Duck() : Flyable, Swimming {
     override fun fly() {
         println("Утка может плавать")
     }
@@ -43,8 +34,11 @@ class Duck() : Animal(), Flyable, Swimming {
 }
 
 fun main() {
-    listOf(Carp(), Gull(), Duck()).forEach {
-        it.printAbilities()
-        println()
-    }
+    Carp().swim()
+    println()
+    Gull().fly()
+    println()
+    val duck = Duck()
+    duck.fly()
+    duck.swim()
 }
