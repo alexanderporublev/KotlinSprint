@@ -1,7 +1,7 @@
 package lesson16
 
 class Circle(
-    val radius: Double
+    private val radius: Double
 ) {
     private val Pi = 3.14
 
@@ -11,9 +11,8 @@ class Circle(
 }
 
 fun main() {
-    val circle = Circle(5.toDouble())
+    val circle = Circle(5.0)
     println("""
-        Радиус: ${circle.radius}
         Длина окружности: ${circle.getPerimeter()}
         Площадь: ${circle.getSquare()}
     """.trimIndent())
