@@ -11,6 +11,6 @@ class Ship(
 }
 
 fun main() {
-    val ship = Ship("Решительный", 100.toDouble(), "Владивосток")
+    val ship = Ship("Решительный", 100.0, "Владивосток")
     ship.name = "Юрий Долгорукий"
 }
