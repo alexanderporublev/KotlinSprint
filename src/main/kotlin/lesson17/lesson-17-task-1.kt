@@ -1,7 +1,5 @@
 package lesson17
 
-import kotlin.reflect.KProperty
-
 class Question(
     question: String,
     answer: String,
