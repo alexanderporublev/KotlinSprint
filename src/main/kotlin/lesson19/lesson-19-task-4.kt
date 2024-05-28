@@ -1,20 +1,19 @@
 package lesson19
 
-import kotlin.math.tan
-
 enum class BulletType {
-    Red{
+    Red {
         override val power: Int
             get() = 20
     },
-    Blue{
+    Blue {
         override val power: Int
             get() = 5
     },
-    Green{
+    Green {
         override val power: Int
             get() = 10
     };
+
     abstract val power: Int
 }
 
@@ -23,7 +22,7 @@ class Tank(
 ) {
     private var currentGunType: BulletType = BulletType.Red
 
-    fun changeGun(newGun: BulletType){
+    fun changeGun(newGun: BulletType) {
         currentGunType = newGun
     }
 
