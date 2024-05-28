@@ -2,9 +2,10 @@ package lesson19
 
 import java.util.UUID
 
-enum class GoodCategory { Clothe, Tools, Other;
+enum class GoodCategory {
+    Clothe, Tools, Other;
 
-    fun getCategoryName(): String = when(this) {
+    fun getCategoryName(): String = when (this) {
         Clothe -> "Одежда"
         Tools -> "Инструменты"
         Other -> "Разное"
@@ -16,10 +17,12 @@ class Good(
     val name: String,
     val category: GoodCategory,
 ) {
-    fun printInfo() = println("""
+    fun printInfo() = println(
+        """
         Наименование: $name
         Категория: ${category.getCategoryName()}
-    """.trimIndent())
+    """.trimIndent()
+    )
 }
 
 fun main() {
