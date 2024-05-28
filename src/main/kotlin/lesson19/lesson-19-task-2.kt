@@ -2,17 +2,13 @@ package lesson19
 
 import java.util.UUID
 
-enum class GoodCategory {
-                          Clothe {
-                              override fun text(): String = "Одежда"
-                          },
-    Tools{
-        override fun text(): String = "Инструменты"
-    },
-    Other{
-        override fun text(): String = "Разное"
-    };
-    abstract fun text(): String
+enum class GoodCategory { Clothe, Tools, Other;
+
+    fun getCategoryName(): String = when(this) {
+        Clothe -> "Одежда"
+        Tools -> "Инструменты"
+        Other -> "Разное"
+    }
 }
 
 class Good(
@@ -22,7 +18,7 @@ class Good(
 ) {
     fun printInfo() = println("""
         Наименование: $name
-        Категория: ${category.text()}
+        Категория: ${category.getCategoryName()}
     """.trimIndent())
 }
 
