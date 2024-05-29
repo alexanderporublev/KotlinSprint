@@ -1,7 +1,5 @@
 package lesson19
 
-import com.sun.media.sound.InvalidFormatException
-
 enum class Sex {
     MALE {
         override fun string(): String = "Мужской"
