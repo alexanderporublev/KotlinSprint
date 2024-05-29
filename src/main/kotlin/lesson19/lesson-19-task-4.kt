@@ -1,8 +1,9 @@
 package lesson19
 
-enum class BulletType(val damage: Int) {   Red(20), Blue(5), Green(10), NotLoaded(0)}
+enum class BulletType(val damage: Int) { Red(20), Blue(5), Green(10), NotLoaded(0) }
 
-class Tank(gunType: BulletType = BulletType.NotLoaded
+class Tank(
+    gunType: BulletType = BulletType.NotLoaded
 
 ) {
     private var currentGunType: BulletType = gunType
