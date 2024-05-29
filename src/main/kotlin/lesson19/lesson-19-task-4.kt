@@ -1,36 +1,23 @@
 package lesson19
 
-enum class BulletType {
-    Red {
-        override val power: Int
-            get() = 20
-    },
-    Blue {
-        override val power: Int
-            get() = 5
-    },
-    Green {
-        override val power: Int
-            get() = 10
-    };
+enum class BulletType(val damage: Int) {   Red(20), Blue(5), Green(10), NotLoaded(0)}
 
-    abstract val power: Int
-}
-
-class Tank(
+class Tank(gunType: BulletType = BulletType.NotLoaded
 
 ) {
-    private var currentGunType: BulletType = BulletType.Red
+    private var currentGunType: BulletType = gunType
 
     fun changeGun(newGun: BulletType) {
         currentGunType = newGun
     }
 
-    fun shut() = println("Наношу урон ${currentGunType.power}")
+    fun shut() = println("Наношу урон ${currentGunType.damage}")
 }
 
 fun main() {
     val tank = Tank()
+    tank.shut()
+    tank.changeGun(BulletType.Red)
     tank.shut()
     tank.changeGun(BulletType.Blue)
     tank.shut()
