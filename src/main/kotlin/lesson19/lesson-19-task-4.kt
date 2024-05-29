@@ -1,18 +1,20 @@
 package lesson19
 
-enum class BulletType(val damage: Int) { Red(20), Blue(5), Green(10), NotLoaded(0) }
+enum class BulletType(val damage: Int) { Red(20), Blue(5), Green(10) }
 
 class Tank(
-    gunType: BulletType = BulletType.NotLoaded
-
+    gunType: BulletType? = null,
 ) {
-    private var currentGunType: BulletType = gunType
+    private var currentGunType: BulletType? = gunType
 
     fun changeGun(newGun: BulletType) {
         currentGunType = newGun
     }
 
-    fun shut() = println("Наношу урон ${currentGunType.damage}")
+    fun shut() = currentGunType?.let {
+        println("Наношу урон ${it.damage}")
+    } ?: println("Пушка не заряжена")
+
 }
 
 fun main() {
