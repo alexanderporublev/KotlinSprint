@@ -3,14 +3,7 @@ package lesson19
 enum class Sex(val humanName: String) {
     MALE("Мужской"),
     FEMALE("Женский");
-
-    companion object {
-        fun fromString(str: String): Sex = when (str) {
-            "М" -> MALE
-            "Ж" -> FEMALE
-            else -> throw Exception("Неверный ввод пола")
-        }
-    }
+    
 }
 
 class Human(
