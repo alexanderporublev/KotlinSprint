@@ -1,6 +1,6 @@
 package lesson20
 
-class Player(
+class Player1(
     val name: String,
     val maxHealth: Int,
 ){
@@ -8,9 +8,9 @@ class Player(
 }
 
 fun main(){
-    val repair: (player: Player, repairValue: Int) -> Unit = {player, repairValue -> player.currentHealth = Math.min(player.maxHealth, player.currentHealth + repairValue) }
+    val repair: (player: Player1, repairValue: Int) -> Unit = {player, repairValue -> player.currentHealth = Math.min(player.maxHealth, player.currentHealth + repairValue) }
 
-    val player = Player("Вася", 100)
+    val player = Player1("Вася", 100)
     player.currentHealth = 30
     repair(player, 40)
     println("${player.name}: ${player.currentHealth}")
